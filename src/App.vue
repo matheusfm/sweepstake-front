@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+    <b-navbar toggleable='md' type='dark' variant='dark'>
+      <b-navbar-toggle target='nav_collapse'></b-navbar-toggle>
+
+      <b-navbar-brand href='#'>Bolão</b-navbar-brand>
+
+      <b-collapse is-nav id='nav_collapse'>
+        <b-navbar-nav>
+          <b-nav-item to='/jogos'>Jogos</b-nav-item>
+          <b-nav-item to='/apostas'>Apostas</b-nav-item>
+          <b-nav-item href='#' disabled>Pontuação</b-nav-item>
+        </b-navbar-nav>
+        <b-navbar-nav class='ml-auto'>
+          <b-nav-item to='/login'>Login</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  name: 'app'
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
